@@ -4,16 +4,14 @@ namespace HW1
 {
     public class Task1
     {
-        public static bool IsPrimeNumber(int number, out string error)
+        public static bool IsPrimeNumber(int number)
         {
             int d = 0;
             int i = 2;
-            error = String.Empty;
 
             if (number < 0)
             {
-                error = "Число должно быть натуральным";
-                return false;
+                throw new ArgumentException("Число должно быть натуральным");
             }
 
             while (i < number)
@@ -29,9 +27,9 @@ namespace HW1
             return d == 0;
         }
 
-        public static string IsPrimeNumberToString(int number, out string error)
+        public static string IsPrimeNumberToString(int number)
         {
-            var result = IsPrimeNumber(number, out error);
+            var result = IsPrimeNumber(number);
 
             return result ? "Простое" : "Не простое";
         }

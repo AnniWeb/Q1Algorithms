@@ -9,16 +9,20 @@ namespace HW1
 
         public void exec()
         {
-            var resultOut = Task1.IsPrimeNumber(InputNumber, out string error);
-            var resultOutString = resultOut ? "Простое" : "Не простое";
             var resultExpectedString = Expected ? "Простое" : "Не простое";
-            
             Console.WriteLine($"Входящее число: {InputNumber}");
-            Console.WriteLine($"Полученный результат: {resultOut}, в текстовом виде: {resultOutString}");
-            if (error != String.Empty)
+            
+            try
             {
-                Console.WriteLine($"Ошибка: {error}");
+                var resultOut = Task1.IsPrimeNumber(InputNumber);
+                var resultOutString = resultOut ? "Простое" : "Не простое";
+                Console.WriteLine($"Полученный результат: {resultOut}, в текстовом виде: {resultOutString}");
             }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Ошибка: {e.Message}");
+            }
+            
             Console.WriteLine($"Ожидаемый результат: {Expected}, в текстовом виде: {resultExpectedString}");
         }
     }
@@ -31,17 +35,29 @@ namespace HW1
         public void exec()
         {
             int[] sequence = new int[0];
-            var resultOutRec = Task3.getFibonacciNumber(InputNumber, out string error);
-            var resultOutWRec = Task3.getFibonacciSequence(InputNumber, ref sequence);
-            
             Console.WriteLine($"Входящее число: {InputNumber}");
-            Console.WriteLine($"Полученный результат без рекурсии: {resultOutRec}");
-            if (error != String.Empty)
+
+            try
             {
-                Console.WriteLine($"Ошибка: {error}");
+                var resultOutRec = Task3.getFibonacciNumber(InputNumber);
+                Console.WriteLine($"Полученный результат без рекурсии: {resultOutRec}");
             }
-            Console.WriteLine($"Полученный результат c рекурсией: {resultOutWRec}");
-            Console.WriteLine($"Последовательность: {String.Join(", ", sequence)}");
+            catch (Exception e)
+            {
+                Console.WriteLine($"Ошибка: {e.Message}");
+            }
+
+            try
+            {
+                var resultOutWRec = Task3.getFibonacciSequence(InputNumber, ref sequence);
+                Console.WriteLine($"Полученный результат c рекурсией: {resultOutWRec}");
+                Console.WriteLine($"Последовательность: {String.Join(", ", sequence)}");
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine($"Ошибка: {e.Message}");
+            }
+            
             Console.WriteLine($"Ожидаемый результат: {Expected}");
         }
     }

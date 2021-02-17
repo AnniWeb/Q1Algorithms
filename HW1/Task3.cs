@@ -5,15 +5,13 @@ namespace HW1
     public class Task3
     {
         // без рекурсии
-        public static int getFibonacciNumber(int number, out string error)
+        public static int getFibonacciNumber(int number)
         {
             int resultNumber = 0;
-            error = String.Empty;
 
             if (number < 0)
             {
-                error = "Данный метод не работает с отрицательными числами";
-                return 0;
+                throw new ArgumentException("Данный метод не работает с отрицательными числами");
             }
 
             while (number != 0)
