@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW1", "HW1\HW1.csproj", "{01E74090-DD58-47B8-8C68-4032F23C7A11}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HW2", "HW2\HW2.csproj", "{60C1388A-F838-4AB9-B128-79A99B19C8FD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +16,11 @@ Global
 		{01E74090-DD58-47B8-8C68-4032F23C7A11}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01E74090-DD58-47B8-8C68-4032F23C7A11}.Release|Any CPU.Build.0 = Release|Any CPU
 		{01E74090-DD58-47B8-8C68-4032F23C7A11}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{60C1388A-F838-4AB9-B128-79A99B19C8FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60C1388A-F838-4AB9-B128-79A99B19C8FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60C1388A-F838-4AB9-B128-79A99B19C8FD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{60C1388A-F838-4AB9-B128-79A99B19C8FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60C1388A-F838-4AB9-B128-79A99B19C8FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60C1388A-F838-4AB9-B128-79A99B19C8FD}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
